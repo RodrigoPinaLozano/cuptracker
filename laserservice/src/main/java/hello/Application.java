@@ -3,6 +3,7 @@ package hello;
 import com.fazecast.jSerialComm.SerialPort;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +23,7 @@ public class Application {
     }};
 
     @RequestMapping("/")
+    @CrossOrigin
     public List<CupboardInfo> home() {
         String distanceStr;
         cupboards.get(0).setCurrentDistance(comInfo.getCurrentWidth());
