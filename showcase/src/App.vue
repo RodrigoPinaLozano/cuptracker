@@ -2,7 +2,7 @@
   <div id="app">
     <div v-if="cupInCupboard">
       <h1>
-        There's a cup in the cupboard.
+        There's at least one cup in the cupboard.
       </h1>
       <img src="./assets/cup.png">
     </div>
@@ -28,14 +28,21 @@ export default {
       cupInCupboard: false,
     };
   },
+  methods: {
+    loadData: function() {
+      const myApp = this;
+      axios.get('http://100.104.3.6:8070/', {}).then(function(response) {
+        let data = response.data;
+        myApp.cupInCupboard = data[0].areCupsInCupboard;
+      });
+    },
+  },
   created: function() {
     const myApp = this;
+    myApp.loadData();
     this.interval = setInterval(
       function() {
-        axios.get('http://100.104.3.6:8070/', {}).then(function(response) {
-          let data = response.data;
-          myApp.cupInCupboard = data[0].areCupsInCupboard;
-        });
+        myApp.loadData();
       }.bind(this),
       1000
     );
