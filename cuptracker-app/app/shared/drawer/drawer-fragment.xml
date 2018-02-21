@@ -17,6 +17,7 @@ Feel free to customize layouts and components to change how your app drawer look
                 <Label row="0" col="1" text="Home" class="p-r-10" />
             </GridLayout>
 
+<<<<<<< HEAD
             <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'web-view' ? ' selected': '') }}"
                 route="web-view/web-view" tap="onNavigationItemTap">
                 <Label row="0" col="0" text="&#xf015;" class="fa" />
@@ -26,6 +27,10 @@ Feel free to customize layouts and components to change how your app drawer look
             <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Browse' ? ' selected': '') }}"
                 route="browse/browse-page" tap="onNavigationItemTap">
                 <Label row="0" col="0" text="&#xf1ea;" class="fa" />
+=======
+            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Browse' ? ' selected': '') }}"
+                route="browse/browse-page" tap="onNavigationItemTap">
+>>>>>>> rodrigo
                 <Label row="0" col="1" text="Browse" class="p-r-10" />
             </GridLayout>
 

@@ -14,6 +14,10 @@
   },
   "dependencies": {
     "nativescript-google-maps-sdk": "^2.5.0",
+<<<<<<< HEAD
+=======
+    "nativescript-permissions": "^1.2.3",
+>>>>>>> rodrigo
     "nativescript-pro-ui": "~3.3.0",
     "nativescript-theme-core": "~1.0.4",
     "tns-core-modules": "~3.4.0"
@@ -34,4 +38,8 @@
     "uglifyjs-webpack-plugin": "~1.1.6",
     "sass-loader": "~6.0.6"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> rodrigo

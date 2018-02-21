@@ -8,4 +8,8 @@ function HomeViewModel() {
     return viewModel;
 }
 
+<<<<<<< HEAD
 module.exports = HomeViewModel;
+=======
+module.exports = HomeViewModel;
+>>>>>>> rodrigo
