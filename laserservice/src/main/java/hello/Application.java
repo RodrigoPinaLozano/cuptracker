@@ -16,7 +16,7 @@ import java.util.Random;
 public class Application {
 
     private List<CupboardInfo> cupboards = new ArrayList<CupboardInfo>() {{
-        add(new CupboardInfo(58, "Küche EG"));
+        add(new CupboardInfo(20, "Küche EG"));
         add(new CupboardInfo(58, "Küche 1. OG"));
         add(new CupboardInfo(58, "Küche 2. OG"));
     }};
