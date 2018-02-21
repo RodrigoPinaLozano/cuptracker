@@ -2,6 +2,7 @@
     class="page"
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+    xmlns:maps="nativescript-google-maps-sdk"
     xmlns:drawer="shared/drawer"
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
@@ -18,7 +19,7 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <Label class="action-bar-title" text="Home"></Label>
+        <Label class="action-bar-title" text="Where are the Cups?"></Label>
     </ActionBar>
 
     <!--
@@ -58,8 +59,30 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
             <GridLayout class="page-content">
-                <Label class="page-icon fa" text="&#xf015;"></Label>
-                <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
+                <maps:mapView latitude="{{ latitude }}" longitude="{{ longitude }}"
+                        zoom="{{ zoom }}" minZoom="{{ minZoom }}" maxZoom="{{ maxZoom }}" bearing="{{ bearing }}" mapAnimationsEnabled="{{ mapAnimationsEnabled }}"
+                        tilt="{{ tilt }}" i-padding="50,50,50,50" padding="{{ padding }}" mapReady="onMapReady"
+                        markerSelect="onMarkerEvent" markerBeginDragging="onMarkerEvent"
+                        markerEndDragging="onMarkerEvent" markerDrag="onMarkerEvent"
+                        markerInfoWindowTapped="onMarkerEvent" coordinateTapped="onCoordinateTapped"
+                        cameraChanged="onCameraChanged">
+                    <maps:mapView.infoWindowTemplate>
+                        <StackLayout orientation="vertical" width="200" height="150" >
+                            <Label text="{{title}}" className="title" width="125"   />
+                            <Label text="{{snippet}}" className="snippet" width="125"   />
+                            <Label text="{{'LAT: ' + position.latitude}}" className="infoWindowCoordinates"  />
+                            <Label text="{{'LON: ' + position.longitude}}" className="infoWindowCoordinates"  />
+                        </StackLayout>
+                    </maps:mapView.infoWindowTemplate>
+                    <maps:mapView.infoWindowTemplates>
+                        <template key="testWindow">
+                            <StackLayout orientation="vertical" width="160" height="160" >
+                                <Image src="res://Coffee-24" stretch="fill"  height="100" width="100" className="infoWindowImage" />
+                                <Label text="Let's Begin!" className="title" />
+                            </StackLayout>
+                        </template>
+                    </maps:mapView.infoWindowTemplates>
+                </maps:mapView>
             </GridLayout>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>

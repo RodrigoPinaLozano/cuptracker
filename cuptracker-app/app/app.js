@@ -1,8 +1,8 @@
 require("./bundle-config");
-const application = require("application");
+var application = require("application");
 
 if (application.ios) {
-    GMSServices.provideAPIKey("AIzaSyBpCBZTRmUsRHqQgfDEaLprkqqYTxZjFQs");
+    GMSServices.provideAPIKey("AIzaSyAtRVvG3Be3xXiZFR7xp-K-9hy4nZ4hMFs");
 }
 
 application.start({ moduleName: "home/home-page" });
