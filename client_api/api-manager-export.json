@@ -1,6 +1,6 @@
 {
   "Metadata" : {
-    "exportedOn" : "2018-02-21T15:03:51Z",
+    "exportedOn" : "2018-02-21T15:53:26Z",
     "apimanVersion" : "1.3.1.Final"
   },
   "Users" : [ {
@@ -296,13 +296,13 @@
         "name" : "cupboard",
         "createdBy" : "admin",
         "createdOn" : "2018-02-21T13:57:37Z",
-        "numPublished" : 6
+        "numPublished" : 7
       },
       "Versions" : [ {
         "ApiVersionBean" : {
           "id" : 1010,
           "status" : "Published",
-          "endpoint" : "http://localhost:8080",
+          "endpoint" : "http://100.104.3.6:8070",
           "endpointType" : "rest",
           "endpointContentType" : "json",
           "endpointProperties" : { },
@@ -315,8 +315,8 @@
           "createdBy" : "admin",
           "createdOn" : "2018-02-21T13:57:37Z",
           "modifiedBy" : "admin",
-          "modifiedOn" : "2018-02-21T15:03:35Z",
-          "publishedOn" : "2018-02-21T15:03:36Z",
+          "modifiedOn" : "2018-02-21T15:52:57Z",
+          "publishedOn" : "2018-02-21T15:52:59Z",
           "parsePayload" : false
         },
         "Policies" : [ ]
@@ -470,6 +470,25 @@
       "entityId" : "cupboard",
       "entityVersion" : "1.0",
       "createdOn" : "2018-02-21T15:03:37Z",
+      "what" : "Publish"
+    }, {
+      "id" : 1025,
+      "who" : "admin",
+      "organizationId" : "cuptracker",
+      "entityType" : "Api",
+      "entityId" : "cupboard",
+      "entityVersion" : "1.0",
+      "createdOn" : "2018-02-21T15:52:57Z",
+      "what" : "Update",
+      "data" : "{\"changes\":[{\"name\":\"endpoint\",\"before\":\"http://localhost:8080\",\"after\":\"http://100.104.3.6:8070\"}]}"
+    }, {
+      "id" : 1026,
+      "who" : "admin",
+      "organizationId" : "cuptracker",
+      "entityType" : "Api",
+      "entityId" : "cupboard",
+      "entityVersion" : "1.0",
+      "createdOn" : "2018-02-21T15:52:59Z",
       "what" : "Publish"
     } ]
   } ]
