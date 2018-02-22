@@ -38,4 +38,5 @@ public class ComInfo implements Runnable {
     public int getCurrentWidth() {
         return currentWidth;
     }
+
 }
