@@ -10,7 +10,7 @@ public class ComInfo implements Runnable {
 
     @Override
     public void run() {
-        SerialPort commPort = SerialPort.getCommPort("/dev/cu.usbmodem14121");
+        SerialPort commPort = SerialPort.getCommPort("/dev/cu.usbmodem14421");
         commPort.openPort();
         InputStream in = commPort.getInputStream();
         while (true){
